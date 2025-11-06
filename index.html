@@ -66,7 +66,7 @@
           <div style="margin-top:1rem;">
                 <!-- Apply now → Directly opens checkout -->
                 <a class="btn btn-brand"
-                   href="https://whop.com/tradewise-coaching-courses-719a/tradewise-day-trader-bootcamp"
+                   href="https://whop.com/jhtrading/1on1-mentorship-8d/"
                    target="_blank"
                    rel="noopener">
                    Apply now
@@ -130,7 +130,7 @@
       </ul>
 
       <a class="btn btn-brand"
-         href="https://whop.com/tradewise-coaching-courses-719a/tradewise-day-trader-bootcamp"
+         href="https://whop.com/jhtrading/1on1-mentorship-8d/"
          target="_blank" rel="noopener">Start monthly</a>
     </div>
 
@@ -155,19 +155,14 @@
     </div>
   </footer>
 
-  <!-- Dynamic spots + year updater script -->
-  <script>
-    document.getElementById('y').textContent=new Date().getFullYear();
+<!-- Dynamic spots + year updater script -->
+<script>
+  // Update year automatically
+  document.getElementById('y').textContent = new Date().getFullYear();
 
-    // === Dynamic members left ===
-    const totalSpots = 10;       // total slots
-    const reservedSpots = 7;     // change this number to update dynamically
-    const spotsLeft = totalSpots - reservedSpots;
+  // Show simple availability message
+  document.getElementById('dynamicSpots').textContent = "Only a limited number of spots available!";
+</script>
 
-    document.getElementById('dynamicSpots').textContent = `${totalSpots} total spots • ${reservedSpots} reserved • ${spotsLeft} open.`;
-    document.getElementById('totalSpots').textContent = totalSpots;
-    document.getElementById('reservedSpots').textContent = reservedSpots;
-    document.getElementById('spotsLeft').textContent = spotsLeft;
-  </script>
 </body>
 </html>
