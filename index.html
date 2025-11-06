@@ -4,6 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>1‑on‑1 Trading Mentorship</title>
+
+  <!--
+    ✨ HOW THIS FILE WORKS (READ ME)
+    - Replace the WHOP checkout placeholders with your real links from Whop → Product → Pricing → Copy checkout link.
+    - Replace the Calendly and Email placeholders with your own.
+    - "See pricing" uses an in‑page anchor (#pricing). Keep the section id="pricing" below.
+    - Optional embedded checkout snippet is included at the bottom as a commented section — use it if your host allows <script>.
+  -->
+
   <style>
     :root { --bg:#0a0a0a; --card:#121212; --muted:#a1a1aa; --line:#2a2a2a; --brand:#10b981; --text:#e5e7eb; }
     *{box-sizing:border-box}
@@ -26,7 +35,7 @@
     .pill{border:1px solid var(--line);border-radius:.85rem;padding:.8rem}
     .center{text-align:center}
     .footer{border-top:1px solid #1a1a1a;background:rgba(10,10,10,.85)}
-    .hero-bg{position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 0%, rgba(16,185,129,.18), transparent 60%);}
+    .hero-bg{position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 0%, rgba(16,185,129,.18), transparent 60%);} 
     .logo{height:28px;width:28px;border-radius:6px;background:var(--brand);display:inline-block}
     .tag{display:inline-flex;align-items:center;gap:.4rem;border:1px solid #2a2a2a;background:#0c0c0c;border-radius:999px;padding:.35rem .7rem;color:#d4d4d8;font-size:.85rem}
     .highlight{color:#34d399}
@@ -39,6 +48,7 @@
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:.9rem 1rem;">
       <div style="display:flex;align-items:center;gap:.6rem"><span class="logo" aria-hidden="true"></span><strong>1‑on‑1 Trading Mentorship</strong></div>
       <nav class="muted" style="display:none;gap:1rem" id="nav-links">
+        <!-- Top navigation anchors (optional) -->
         <a href="#included">Included</a>
         <a href="#pricing">Pricing</a>
         <a href="#apply">Apply</a>
@@ -57,7 +67,12 @@
           <h1 class="h1">I’m super excited to finally share what you’ll get when joining my <span class="highlight">1‑on‑1 trading mentorship</span>!</h1>
           <p class="muted" style="max-width:65ch">Build a repeatable, rules‑based process with weekly calls, private access, and a tailored plan for risk, execution, and growth.</p>
           <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.7rem">
-            <a class="btn btn-brand" href="REPLACE_WITH_WHOP_CHECKOUT_MAIN" target="_blank" rel="noopener">Apply now</a>
+            <!-- HERO CTA → WHOP checkout (MAIN). 
+                 Replace with your primary plan link (monthly OR one‑time). 
+                 Get it from Whop → Product → Pricing → Copy checkout link. -->
+            <a class="btn btn-brand" href="https://whop.com/checkout/YOUR_PRIMARY_PLAN" target="_blank" rel="noopener">Apply now</a>
+
+            <!-- In‑page jump to pricing (keep id="pricing" below) -->
             <a class="btn btn-ghost" href="#pricing">See pricing</a>
           </div>
           <div class="muted" style="margin-top:.5rem;font-size:.85rem">Spots are limited. Current capacity: <strong style="color:#e5e7eb">10</strong> total • <strong style="color:#e5e7eb">7</strong> reserved • <strong class="highlight">3 available</strong>.</div>
@@ -96,6 +111,7 @@
       <h2 class="h2">Pricing</h2>
       <p class="muted" style="max-width:65ch">Two options, as requested by many traders. First month on monthly is discounted by $50.</p>
       <div class="row row-2" style="margin-top:.8rem">
+        <!-- ONE‑TIME CARD -->
         <div class="card">
           <div style="display:flex;align-items:center;justify-content:space-between"><div class="h3" style="margin:0">One‑time</div></div>
           <div class="h1" style="font-size:2.1rem;margin-top:.25rem">$2,500 USD</div>
@@ -104,8 +120,11 @@
             <li>All inclusions above</li>
             <li>Best if you want to commit upfront</li>
           </ul>
-          <a class="btn btn-brand" href="REPLACE_CHECKOUT_ONE_TIME" target="_blank" rel="noopener">Choose one‑time</a>
+          <!-- Button → WHOP checkout (ONE‑TIME plan). Replace with real one‑time checkout URL. -->
+          <a class="btn btn-brand" href="https://whop.com/checkout/YOUR_ONE_TIME_LINK" target="_blank" rel="noopener">Choose one‑time</a>
         </div>
+
+        <!-- MONTHLY CARD -->
         <div class="card" style="border-color:var(--brand)">
           <div style="display:flex;align-items:center;justify-content:space-between"><div class="h3" style="margin:0">Monthly</div><span class="badge">$50 off first month</span></div>
           <div class="h1" style="font-size:2.1rem;margin-top:.25rem">$350 / month</div>
@@ -115,9 +134,12 @@
             <li>All inclusions above</li>
             <li>Great to start and scale</li>
           </ul>
-          <a class="btn btn-brand" href="REPLACE_CHECKOUT_MONTHLY" target="_blank" rel="noopener">Start monthly</a>
+          <!-- Button → WHOP checkout (MONTHLY plan). Replace with real monthly checkout URL. 
+               If you use a coupon for $50 off first month, create it in Whop and use a link that auto‑applies it. -->
+          <a class="btn btn-brand" href="https://whop.com/checkout/YOUR_MONTHLY_LINK" target="_blank" rel="noopener">Start monthly</a>
         </div>
       </div>
+      <!-- Scarcity / availability notice (edit numbers as they change) -->
       <div class="card notice" style="margin-top:1rem">
         <strong>⚠️ Limited availability:</strong> only 10 total spots. 7 reserved, 3 open.
       </div>
@@ -131,8 +153,11 @@
         <h3 class="h3">Apply / Contact</h3>
         <p class="muted" style="font-size:.95rem">Have questions before joining? Book a quick intro call or send me an email.</p>
         <div style="display:flex;gap:.7rem;flex-wrap:wrap">
-          <a class="btn btn-ghost" href="REPLACE_WITH_CALENDLY_URL" target="_blank" rel="noopener">Book 15‑min intro</a>
-          <a class="btn btn-brand" href="mailto:REPLACE_WITH_EMAIL">Email me</a>
+          <!-- Button → your Calendly link (or any booking tool). Replace URL. -->
+          <a class="btn btn-ghost" href="https://calendly.com/YOUR_USERNAME/15min" target="_blank" rel="noopener">Book 15‑min intro</a>
+
+          <!-- Button → your mailto link. Replace email. -->
+          <a class="btn btn-brand" href="mailto:hello@yourdomain.com">Email me</a>
         </div>
       </div>
     </div>
@@ -149,6 +174,20 @@
       </div>
     </div>
   </footer>
+
+  <!-- Minimal year updater -->
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+  <!--
+    OPTIONAL: Embedded Whop checkout (use only if your host allows <script>)
+    1) Uncomment the <script> tag in <head> OR paste it here before the embed div.
+       <script async defer src="https://js.whop.com/static/checkout/loader.js"></script>
+    2) Replace plan_XXXX with your real plan id from Whop (Dashboard → Plans).
+    3) Place the div where you want the embed to appear.
+
+    <div data-whop-checkout-theme="dark"
+         data-whop-checkout-plan-id="plan_XXXXXXXX"
+         style="max-width:680px;border:1px solid #2a2a2a;border-radius:1rem"></div>
+  -->
 </body>
 </html>
