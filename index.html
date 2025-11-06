@@ -7,7 +7,7 @@
 
   <style>
     :root { --bg:#0a0a0a; --card:#121212; --muted:#a1a1aa; --line:#2a2a2a; --brand:#10b981; --text:#e5e7eb; }
-    *{box-sizing:border-box}
+    *{box-sizing:border-box;scroll-behavior:smooth;}
     body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
     a{color:inherit;text-decoration:none}
     .container{max-width:1100px;margin:0 auto;padding:0 1rem}
@@ -26,7 +26,7 @@
       inset:0;
       background:radial-gradient(60% 50% at 50% 0%, rgba(16,185,129,.18), transparent 60%);
       z-index:0;
-      pointer-events:none; /* 👈 allows clicks to pass through */
+      pointer-events:none;
     }
     .logo{height:28px;width:28px;border-radius:6px;background:var(--brand);display:inline-block}
     .tag{display:inline-flex;align-items:center;gap:.4rem;border:1px solid #2a2a2a;background:#0c0c0c;border-radius:999px;padding:.35rem .7rem;color:#d4d4d8;font-size:.85rem}
@@ -50,7 +50,7 @@
     <div class="container" style="padding:80px 1rem; position:relative; z-index:1;">
       <div class="row row-2" style="align-items:center">
         <div>
-          <span class="tag">Personalized mentorship</span>
+          <span class="tag">🎯 Personalized mentorship</span>
           <h1 class="h1">
             I’m super excited to finally share what you’ll get when joining my 
             <span class="highlight">1-on-1 trading mentorship</span>!
@@ -59,12 +59,8 @@
             Build a repeatable, rules-based process with weekly calls, private access, and a tailored plan for risk, execution, and growth.
           </p>
           <div style="margin-top:1rem;">
-            <!-- Apply now → Directly opens checkout -->
-            <a id="applyBtn" class="btn btn-brand"
-               href="https://whop.com/checkout/plan_zI8z54a4tqQGL?d2c=true"
-               target="_blank" rel="noopener">
-               Apply now
-            </a>
+            <!-- Apply now → scrolls down to pricing section -->
+            <a class="btn btn-brand" href="#pricing">Apply now</a>
           </div>
           <div class="muted" style="margin-top:.5rem;font-size:.85rem">
             Spots are limited. <strong class="highlight" id="dynamicSpots">Only a limited number of spots available!</strong>
@@ -104,12 +100,31 @@
   <section id="included" style="border-top:1px solid #1a1a1a">
     <div class="container" style="padding:50px 1rem">
       <h2 class="h2">What’s Included</h2>
-      <div class="card" style="margin-top:.8rem">
-        <p>You’ll receive 1x 30 minute 1-on-1 call each week, tailored to the topics of your choice.</p>
-        <p>A personalized guide on my concept based upon your background in trading.</p>
-        <p>A weekly private group call that includes tests to track your progress and development.</p>
-        <p>A personalized risk management plan from 0-100 to help you potentially get profits and payouts.</p>
-        <p>24/7 access to my DMs with all of your questions. (I will answer as fast as I can.)</p>
+      <div class="row row-2" style="margin-top:1rem">
+        <div class="card">
+          <div class="h3">💬 Weekly 1-on-1 Call (30 min)</div>
+          <p class="muted">Tailored to the topics of your choice, with clear steps for improvement each week.</p>
+        </div>
+
+        <div class="card">
+          <div class="h3">📘 Personalized Concept Guide</div>
+          <p class="muted">A custom guide built around your background and experience in trading.</p>
+        </div>
+
+        <div class="card">
+          <div class="h3">👥 Weekly Group Call & Progress Tests</div>
+          <p class="muted">Join a private group call each week with tests to track your growth and performance.</p>
+        </div>
+
+        <div class="card">
+          <div class="h3">📊 Custom Risk Management Plan (0–100)</div>
+          <p class="muted">Designed to help you scale safely and aim for higher consistency and payouts.</p>
+        </div>
+
+        <div class="card">
+          <div class="h3">💬 24/7 DM Access</div>
+          <p class="muted">Ask anything, anytime — I’ll respond as fast as I can with actionable advice.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -161,9 +176,6 @@
   <script>
     // Update year
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Simple availability text
-    document.getElementById('availabilityText').textContent = "Only a limited number of spots available!";
   </script>
 </body>
 </html>
